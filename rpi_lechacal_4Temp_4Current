@@ -24,7 +24,7 @@ __version__ = "${VERSION}"
 
 _DEFAULT_CONFIG = {
     'plugin': {
-        'description': 'Lechacal RPICT3T1 Module Plugin',
+        'description': 'Lechacal RPICT4T4 Module Plugin',
         'type': 'string',
         'default': 'lechacal_RPICT4T4',
         'readonly': 'true'
@@ -36,13 +36,13 @@ _DEFAULT_CONFIG = {
         'order': '1'
     },
     'serial_port': {
-        'description': 'The Serial port name assigned to the RPICT3T1',
+        'description': 'The Serial port name assigned to the RPICT4T4',
         'type': 'string',
         'default': '/dev/ttyAMA0',
         'order': '2'
     },
     'baudrate': {
-        'description': 'The BAUD Rate of the Serial Port assigned to the RPICT3T1',
+        'description': 'The BAUD Rate of the Serial Port assigned to the RPICT4T4',
         'type': 'integer',
         'default': '38400',
         'order': '3'
@@ -61,7 +61,7 @@ def plugin_info():
     """
 
     return {
-        'name': 'RPICT3T1 plugin',
+        'name': 'RPICT4T4 plugin',
         'version': '1.0',
         'mode': 'poll',
         'type': 'south',
@@ -122,7 +122,11 @@ def plugin_poll(handle):
             'Current1': Current1,
             'Current2': Current2,
             'Current3': Current3,
-            'Temperature': Temperature1
+            'Current4': Current4,,
+            'Temperature': Temperature1,
+            'Temperature': Temperature2,
+            'Temperature': Temperature3,
+            'Temperature': Temperature4
         }
         data = {
                 'asset':     handle['assetName']['value'],
