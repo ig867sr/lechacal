@@ -26,7 +26,7 @@ _DEFAULT_CONFIG = {
     'plugin': {
         'description': 'Lechacal RPICT4T4 Module Plugin',
         'type': 'string',
-        'default': 'lechacal_RPICT4T4',
+        'default': 'rpi_lechacal_4T_4C',
         'readonly': 'true'
     },
     'assetName': {
@@ -61,7 +61,7 @@ def plugin_info():
     """
 
     return {
-        'name': 'RPICT4T4 plugin',
+        'name': 'rpi_lechacal_4T_4C plugin',
         'version': '1.0',
         'mode': 'poll',
         'type': 'south',
@@ -122,7 +122,7 @@ def plugin_poll(handle):
             'Current1': Current1,
             'Current2': Current2,
             'Current3': Current3,
-            'Current4': Current4,,
+            'Current4': Current4,
             'Temperature': Temperature1,
             'Temperature': Temperature2,
             'Temperature': Temperature3,
